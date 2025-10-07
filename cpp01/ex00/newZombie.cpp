@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.hpp                                      :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/23 17:39:03 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/09/29 15:30:11 by lucmansa         ###   ########.fr       */
+/*   Created: 2025/10/06 16:28:40 by lucmansa          #+#    #+#             */
+/*   Updated: 2025/10/06 16:28:57 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-#include "Box.hpp"
-#include "Include.hpp"
-
-class Phonebook
-{
-	private:
-		Contact contact[8];
-		int len;
-	public:
-		Phonebook();
-		void Add(Contact contact);
-		void Search();
-};
-#endif
+Zombie* newZombie( std::string name ) {
+	Zombie *zombie = new Zombie(name);
+	return(zombie);
+}

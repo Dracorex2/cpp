@@ -6,15 +6,15 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 15:37:52 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/02 16:07:17 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/06 16:55:34 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "PhoneBook.hpp"
 #include <cstdio>
 
 int main(void) {
-	Phonebook phonebook = Phonebook();
+	PhoneBook phonebook = PhoneBook();
 	std::string line;
 	std::string first_name;
 	std::string last_name;

@@ -1,7 +1,7 @@
-NAME = PhoneBook
+NAME = Zombie
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = Box.cpp Contact.cpp main.cpp PhoneBook.cpp
+SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
@@ -19,3 +19,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: clean fclean re

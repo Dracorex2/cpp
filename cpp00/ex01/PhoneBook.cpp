@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 16:58:15 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/02 15:01:09 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/06 16:56:28 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "PhoneBook.hpp"
 
-Phonebook::Phonebook() {
+PhoneBook::PhoneBook() {
 	this->len = 0;
 }
 
-void Phonebook::Search() {
+void PhoneBook::Search() {
 
 	if (this->len < 1)
 	{
@@ -53,12 +53,13 @@ void Phonebook::Search() {
 	std::cout << "Darkest secret : " << this->contact[i].darkest_secret() << std::endl;
 }
 
-void Phonebook::Add(Contact contact) {
+void PhoneBook::Add(Contact contact) {
 	int	i = 0;
 	if (len == 8) {
 		len--;				
 		while (i < len) {
 			this->contact[i] = this->contact[i + 1];
+			i++;
 		}
 	}
 	this->contact[len] = contact;
