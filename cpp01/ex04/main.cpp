@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 15:49:56 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/07 16:51:28 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/07 18:57:14 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main(int argc, char **argv) {
 	if (argc != 4) {
-		std::cout << "wrong argument need : [filename] [str to replace] [new str]" << std::endl;
+		std::cout << "wrong argument, need : [filename] [str to replace] [new str]" << std::endl;
 		return 1;
 	}
 	std::string file = argv[1];
