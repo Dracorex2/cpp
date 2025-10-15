@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 15:49:56 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/07 18:57:14 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/15 15:09:18 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,13 @@ int main(int argc, char **argv) {
 	std::string search = argv[2];
 	std::string replace = argv[3];
 	std::string str;
+	std::string ret_str;
 	std::ifstream fileIn;
 	fileIn.open(file.c_str());
+	if (!fileIn.good()) {
+		std::cout << "the file does not exist" << std::endl;
+		return (1);
+	}
 	char c;
 	while (1) {
 		if (!fileIn.get(c))
@@ -38,11 +43,19 @@ int main(int argc, char **argv) {
 				break;
   			std::string tmp = str.substr (0, pos);
 			std::string tmp2 = str.substr ((pos + search.length()));
-			str = tmp + replace + tmp2;
+			ret_str += tmp + replace;
+			str = tmp2;
 		}
+		ret_str += str;
 	}
+	else
+		ret_str = str;
 	std::ofstream fileOut;
 	fileOut.open((file + ".replace").c_str());
-	fileOut << str;
+	if (!fileOut.good()) {
+		std::cout << "can't create file" << std::endl;
+		return (1);
+	}
+	fileOut << ret_str;
 	fileOut.close();
 }
