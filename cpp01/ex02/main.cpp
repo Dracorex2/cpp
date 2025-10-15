@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 18:57:28 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/06 19:08:16 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/15 16:17:50 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int main (void) {
 	std::string str = "HI THIS IS BRAIN";
-	std::string *strPTR = &str;
-	std::string &strREF = str;
+	std::string *stringPTR = &str;
+	std::string &stringREF = str;
 
 	std::cout << "adress of str: " << &str << std::endl;
-	std::cout << "adress of strPTR: " << strPTR << std::endl;
-	std::cout << "adress of strREF: " << &strREF << std::endl;
+	std::cout << "adress of strPTR: " << stringPTR << std::endl;
+	std::cout << "adress of strREF: " << &stringREF << std::endl;
 	std::cout << "value of str: " << str << std::endl;
-	std::cout << "value of strPTR: " << *strPTR << std::endl;
-	std::cout << "value of strREF: " << strREF << std::endl;
+	std::cout << "value of strPTR: " << *stringPTR << std::endl;
+	std::cout << "value of strREF: " << stringREF << std::endl;
 }
