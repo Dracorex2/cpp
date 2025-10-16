@@ -6,12 +6,14 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 15:49:56 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/15 16:51:32 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/15 17:23:54 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fstream>
 #include <iostream>
+#include <filesystem>
+#include <sys/stat.h>
 
 int main(int argc, char **argv) {
 	if (argc != 4) {
@@ -23,12 +25,17 @@ int main(int argc, char **argv) {
 	std::string replace = argv[3];
 	std::string str;
 	std::string ret_str;
-	std::ifstream fileIn;
-	fileIn.open(file.c_str());
-	if (!fileIn.good()) {
+	struct stat info;
+	if (stat(file.c_str(), &info)) {
 		std::cout << "the file does not exist" << std::endl;
+		return (1);	
+	}
+	if ((info.st_mode & S_IFDIR) != 0) {
+		std::cout << "your trying to open a directory" << std::endl;
 		return (1);
 	}
+	std::ifstream fileIn;
+	fileIn.open(file.c_str());
 	char c;
 	while (1) {
 		if (!fileIn.get(c))

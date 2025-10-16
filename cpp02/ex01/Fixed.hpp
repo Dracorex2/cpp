@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:27:48 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/15 18:32:01 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/15 19:08:44 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,16 @@ class Fixed
 		static const int frac_bits = 8;
 	public:
 		Fixed();
-		Fixed(Fixed &cpy);
+		Fixed(const int nb);
+		Fixed(const float nb);
+		Fixed(const Fixed &cpy);
 		Fixed &operator=(const Fixed &other);
 		~Fixed();
 		int getRawBits( void ) const;
 		void setRawBits( int const raw );
+		float toFloat( void ) const;
+		int toInt( void ) const;
 };
+
 
 #endif
