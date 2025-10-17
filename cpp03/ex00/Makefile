@@ -1,7 +1,7 @@
-NAME = violance
+NAME = clapTrap
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS = main.cpp ClapTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
@@ -20,4 +20,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re all
+.PHONY: clean fclean re
