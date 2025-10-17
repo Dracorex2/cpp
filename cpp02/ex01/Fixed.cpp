@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:44:21 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/15 19:08:31 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/17 15:10:12 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Fixed::Fixed() {
 	std::cout << "Default constructor called" << std::endl;
+	this->raw = 0;
 }
 
 Fixed::Fixed(const int nb) {
@@ -22,8 +23,8 @@ Fixed::Fixed(const int nb) {
 }
 
 Fixed::Fixed(const float nb) {
-	std::cout << "int constructor called" << std::endl;
-	this->raw = nb * (1 << this->frac_bits);
+	std::cout << "float constructor called" << std::endl;
+	this->raw = roundf(nb * (1 << this->frac_bits));
 }
 
 Fixed::Fixed(const Fixed &cpy) {
@@ -33,7 +34,7 @@ Fixed::Fixed(const Fixed &cpy) {
 
 Fixed &Fixed::operator=(const Fixed &other) {
 	std::cout << "Copy assignment operator called" << std::endl;
-	this->raw = other.getRawBits();
+	this->raw = other.raw;
 	return (*this);
 }
 
@@ -52,14 +53,14 @@ void Fixed::setRawBits( int const raw ) {
 }
 
 float Fixed::toFloat( void ) const {
-	return ((float)this->raw / (1 << this->frac_bits));
+	return ((float)(this->raw / (float)(1 << this->frac_bits)));
 }
 
 int Fixed::toInt( void ) const {
 	return (this->raw / (1 << this->frac_bits));
 }
 
-std::ostream& operator<< (std::ostream &out, Fixed &c)
+std::ostream& operator<<(std::ostream &out, const Fixed &c)
 {
   return out << c.toFloat();
 }
