@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:55:19 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 16:04:42 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/20 17:56:22 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ public:
 	ScavTrap &operator=(const ScavTrap &other);
 	~ScavTrap();
 	void attack(const std::string& target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
 	void guardGate();
 };
 

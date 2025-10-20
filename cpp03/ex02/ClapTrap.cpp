@@ -6,13 +6,14 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:42:10 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/17 17:04:01 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/20 17:08:46 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(): name("mike"), energy_point(10), health_point(10), attack_point(0) {
+	std::cout << "CrapTrap named: mike as been created" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): energy_point(10), health_point(10), attack_point(0) {

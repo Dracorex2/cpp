@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 16:55:19 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 17:56:14 by lucmansa         ###   ########.fr       */
+/*   Created: 2025/10/20 16:50:41 by lucmansa          #+#    #+#             */
+/*   Updated: 2025/10/20 17:40:08 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
+
 #include <iostream>
-#include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class Animal
 {
-private:
-	std::string name;
-	int energy_point;
-	int health_point;
-	int attack_point;
-	
+protected:
+	std::string type;
 public:
-	FragTrap();
-	FragTrap(std::string name);
-	FragTrap(const FragTrap &cpy);
-	FragTrap &operator=(const FragTrap &other);
-	~FragTrap();
-	void attack(const std::string& target);
-	void highFivesGuys(void);
+	Animal();
+	Animal(const Animal &cpy);
+	Animal &operator=(const Animal &other);
+	virtual ~Animal();
+	virtual void makeSound(void) const;
+	virtual std::string getType(void) const;
 };
-
 
 #endif

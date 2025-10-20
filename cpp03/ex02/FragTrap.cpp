@@ -6,13 +6,14 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:54:12 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 16:01:12 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/20 17:08:47 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap(): name("mike"), energy_point(100), health_point(100), attack_point(30) {
+	std::cout << "FragTrap named: mike as been created" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name): energy_point(100), health_point(100), attack_point(30) {

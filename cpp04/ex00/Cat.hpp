@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 16:55:19 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 17:56:14 by lucmansa         ###   ########.fr       */
+/*   Created: 2025/10/20 16:53:32 by lucmansa          #+#    #+#             */
+/*   Updated: 2025/10/20 17:54:09 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
-#include <iostream>
-#include "ClapTrap.hpp"
+#ifndef CAT_HPP
+#define CAT_HPP
+#include "Animal.hpp"
 
-class FragTrap : public ClapTrap
+class Cat : public Animal
 {
 private:
-	std::string name;
-	int energy_point;
-	int health_point;
-	int attack_point;
-	
+	/* data */
 public:
-	FragTrap();
-	FragTrap(std::string name);
-	FragTrap(const FragTrap &cpy);
-	FragTrap &operator=(const FragTrap &other);
-	~FragTrap();
-	void attack(const std::string& target);
-	void highFivesGuys(void);
+	Cat();
+	Cat(const Cat &cpy);
+	Cat &operator=(const Cat &other);
+	~Cat();
 };
-
 
 #endif

@@ -6,13 +6,14 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:54:12 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 16:06:06 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/20 17:08:59 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(): name("mike"), energy_point(10), health_point(10), attack_point(0) {
+	std::cout << "ScavTrap named: mike as been created" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): energy_point(10), health_point(10), attack_point(0) {
