@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:27:48 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/17 15:10:01 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/20 16:30:48 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ class Fixed
 		void setRawBits( int const raw );
 		float toFloat( void ) const;
 		int toInt( void ) const;
-		Fixed &min(Fixed &nb1, Fixed &nb2);
 };
 std::ostream& operator<<(std::ostream &out, Fixed const &c);
 

@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:44:21 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/15 18:32:02 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/20 16:44:47 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 Fixed::Fixed() {
 	std::cout << "Default constructor called" << std::endl;
+	this->raw = 0;
 }
 
 
-Fixed::Fixed(Fixed &cpy) {
+Fixed::Fixed(const Fixed &cpy) {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = cpy;
 }
