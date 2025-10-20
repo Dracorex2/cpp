@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:54:12 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 16:06:06 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/20 16:01:12 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap(): name("mike"), energy_point(10), health_point(10), attack_point(0) {
+FragTrap::FragTrap(): name("mike"), energy_point(100), health_point(100), attack_point(30) {
 }
 
-ScavTrap::ScavTrap(std::string name): energy_point(10), health_point(10), attack_point(0) {
+FragTrap::FragTrap(std::string name): energy_point(100), health_point(100), attack_point(30) {
 	this->name = name;
-	std::cout << "ScavTrap named: " << this->name << " as been created" << std::endl;
+	std::cout << "FragTrap named: " << this->name << " as been created" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &cpy): ClapTrap(cpy) {
+FragTrap::FragTrap(const FragTrap &cpy): ClapTrap(cpy) {
 	*this = cpy;
 }
 
-ScavTrap &ScavTrap::operator=(const ScavTrap &other) {
+FragTrap &FragTrap::operator=(const FragTrap &other) {
 	if (this == &other)
 		return (*this);
 	this->name = other.name;
@@ -34,17 +34,17 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other) {
 	return (*this);
 }
 
-ScavTrap::~ScavTrap() {
-	std::cout << "ScavTrap named: " << this->name << " as been deleted" << std::endl;
+FragTrap::~FragTrap() {
+	std::cout << "FragTrap named: " << this->name << " as been deleted" << std::endl;
 }
 
-void ScavTrap::attack(const std::string& target) {
+void FragTrap::attack(const std::string& target) {
 	if (this->health_point < 1)
-		std::cout << "ScavTrap " << this->name << "ScavTrap can't attack, is DEAD" << std::endl;
+		std::cout << "FragTrap " << this->name << "FragTrap can't attack, is DEAD" << std::endl;
 	else if (this->energy_point < 1)
-		std::cout << "ScavTrap " << this->name << "ScavTrap can't attack, is too tierd" << std::endl;
+		std::cout << "FragTrap " << this->name << "FragTrap can't attack, is too tierd" << std::endl;
 	else {
-		std::cout << "ScavTrap " << this->name << " attack " << target  << "!!!" << std::endl;
+		std::cout << "FragTrap " << this->name << " attack " << target  << "!!!" << std::endl;
 		if (this->attack_point < 1)
 			std::cout << "	bro just blew on it" << std::endl;
 		else
@@ -53,6 +53,7 @@ void ScavTrap::attack(const std::string& target) {
 	}
 }
 
-void ScavTrap::guardGate() {
-	std::cout << "ScavTrap named " << this->name << "enter in Gate keeper" << std::endl;
+
+void FragTrap::highFivesGuys(void) {
+	std::cout << "FragTrap named " << this->name << "high-fives you!!" << std::endl;
 }
