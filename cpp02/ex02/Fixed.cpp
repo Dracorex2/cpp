@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:44:21 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/17 15:08:46 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/20 15:31:47 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ Fixed Fixed::operator++(int) {
 Fixed Fixed::operator--(int) {
 	Fixed a;
 	a = *this;
-	this->setRawBits(this->getRawBits() + 1);
+	this->setRawBits(this->getRawBits() - 1);
 	return (a);
 }
 
@@ -110,7 +110,7 @@ bool Fixed::operator==(const Fixed nb) {
 }
 
 bool Fixed::operator!=(const Fixed nb) {
-	return (this->getRawBits() == nb.getRawBits());
+	return (this->getRawBits() != nb.getRawBits());
 }
 
 bool Fixed::operator<(const Fixed nb) {
@@ -141,13 +141,13 @@ const Fixed &Fixed::max(const Fixed &nb1, const Fixed &nb2) {
 	return (nb2);
 }
 
-const Fixed &Fixed::min( Fixed &nb1, Fixed &nb2) {
+Fixed &Fixed::min( Fixed &nb1, Fixed &nb2) {
 	if (nb1.getRawBits() < nb2.getRawBits())
 		return (nb1);
 	return (nb2);
 }
 
-const Fixed &Fixed::max( Fixed &nb1, Fixed &nb2) {
+Fixed &Fixed::max( Fixed &nb1, Fixed &nb2) {
 	if (nb1.getRawBits() > nb2.getRawBits())
 		return (nb1);
 	return (nb2);
