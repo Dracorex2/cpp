@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:44:21 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 15:31:47 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/21 17:53:27 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,19 +57,19 @@ std::ostream& operator<<(std::ostream &out, const Fixed &c)
   return out << c.toFloat();
 }
 
-Fixed Fixed::operator+(const Fixed nb) {
+Fixed Fixed::operator+(const Fixed nb) const{
 	Fixed a;
 	a.setRawBits(this->getRawBits() + nb.getRawBits());
 	return (a);
 }
 
-Fixed Fixed::operator-(const Fixed nb) {
+Fixed Fixed::operator-(const Fixed nb) const{
 	Fixed a;
 	a.setRawBits(this->getRawBits() - nb.getRawBits());
 	return (a);
 }
 
-Fixed Fixed::operator*(const Fixed nb) {
+Fixed Fixed::operator*(const Fixed nb) const{
 	Fixed a;
 	a.setRawBits((this->getRawBits() * nb.getRawBits()) >> this->frac_bits);
 	return (a);
@@ -99,33 +99,33 @@ Fixed Fixed::operator--(int) {
 	return (a);
 }
 
-Fixed Fixed::operator/(const Fixed nb) {
+Fixed Fixed::operator/(const Fixed nb) const{
 	Fixed a;
 	a.setRawBits((this->getRawBits() << this->frac_bits) / nb.getRawBits());
 	return (a);
 }
 
-bool Fixed::operator==(const Fixed nb) {
+bool Fixed::operator==(const Fixed nb) const{
 	return (this->getRawBits() == nb.getRawBits());
 }
 
-bool Fixed::operator!=(const Fixed nb) {
+bool Fixed::operator!=(const Fixed nb) const{
 	return (this->getRawBits() != nb.getRawBits());
 }
 
-bool Fixed::operator<(const Fixed nb) {
+bool Fixed::operator<(const Fixed nb) const{
 	return (this->getRawBits() < nb.getRawBits());
 }
 
-bool Fixed::operator>(const Fixed nb) {
+bool Fixed::operator>(const Fixed nb) const{
 	return (this->getRawBits() > nb.getRawBits());
 }
 
-bool Fixed::operator<=(const Fixed nb) {
+bool Fixed::operator<=(const Fixed nb) const{
 	return (this->getRawBits() <= nb.getRawBits());
 }
 
-bool Fixed::operator>=(const Fixed nb) {
+bool Fixed::operator>=(const Fixed nb) const{
 	return (this->getRawBits() >= nb.getRawBits());
 }
 

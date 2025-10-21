@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:15:31 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 15:32:14 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/21 17:54:19 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 int main( void ) {
 	float x = 0;
 	float y = 0;
+	std::cout << "enter value for a :" << std::endl;
 	std::cin >> x;
+	std::cout << "enter value for b :" << std::endl;
 	std::cin >> y;
 
 	Fixed a(x);

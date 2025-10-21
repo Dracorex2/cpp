@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:27:48 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 16:30:53 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/21 17:55:09 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,20 @@ class Fixed
 		void setRawBits( int const raw );
 		float toFloat( void ) const;
 		int toInt( void ) const;
-		Fixed operator+(const Fixed nb);
-		Fixed operator-(const Fixed nb);
-		Fixed operator*(const Fixed nb);
-		Fixed operator/(const Fixed nb);
+		Fixed operator+(const Fixed nb) const;
+		Fixed operator-(const Fixed nb) const;
+		Fixed operator*(const Fixed nb) const;
+		Fixed operator/(const Fixed nb) const;
 		Fixed &operator++(void);
 		Fixed &operator--(void);
 		Fixed operator++(int);
 		Fixed operator--(int);
-		bool operator==(const Fixed nb);
-		bool operator!=(const Fixed nb);
-		bool operator>(const Fixed nb);
-		bool operator<(const Fixed nb);
-		bool operator>=(const Fixed nb);
-		bool operator<=(const Fixed nb);
+		bool operator==(const Fixed nb) const;
+		bool operator!=(const Fixed nb) const;
+		bool operator>(const Fixed nb) const;
+		bool operator<(const Fixed nb) const;
+		bool operator>=(const Fixed nb) const;
+		bool operator<=(const Fixed nb) const;
 		static const Fixed &max(const Fixed &nb1, const Fixed &nb2);
 		static const Fixed &min(const Fixed &nb1, const Fixed &nb2);
 		static Fixed &max( Fixed &nb1, Fixed &nb2);
