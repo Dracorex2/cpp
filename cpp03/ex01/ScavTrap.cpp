@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:54:12 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 17:08:59 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/21 16:41:02 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ ScavTrap::ScavTrap(std::string name): energy_point(10), health_point(10), attack
 
 ScavTrap::ScavTrap(const ScavTrap &cpy): ClapTrap(cpy) {
 	*this = cpy;
+	std::cout << "ScavTrap named: " << this->name << " as been copied" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other) {
@@ -41,15 +42,15 @@ ScavTrap::~ScavTrap() {
 
 void ScavTrap::attack(const std::string& target) {
 	if (this->health_point < 1)
-		std::cout << "ScavTrap " << this->name << "ScavTrap can't attack, is DEAD" << std::endl;
+		std::cout << "ScavTrap " << this->name << " can't attack, is DEAD" << std::endl;
 	else if (this->energy_point < 1)
-		std::cout << "ScavTrap " << this->name << "ScavTrap can't attack, is too tierd" << std::endl;
+		std::cout << "ScavTrap " << this->name << " can't attack, is too tierd" << std::endl;
 	else {
 		std::cout << "ScavTrap " << this->name << " attack " << target  << "!!!" << std::endl;
 		if (this->attack_point < 1)
-			std::cout << "	bro just blew on it" << std::endl;
+			std::cout << "ScavTrap " << this->name <<" just blew on it opponant" << std::endl;
 		else
-			std::cout << "	is deal " << this->attack_point << " damage" << std::endl;
+			std::cout << "ScavTrap " << this->name << " deal " << this->attack_point << " damage" << std::endl;
 		this->energy_point--;
 	}
 }

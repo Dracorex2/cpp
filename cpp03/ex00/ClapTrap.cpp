@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:42:10 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 17:09:18 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/21 16:36:10 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ ClapTrap::ClapTrap(std::string name): energy_point(10), health_point(10), attack
 
 ClapTrap::ClapTrap(const ClapTrap &cpy) {
 	*this = cpy;
+	std::cout << "ClapTrap named: " << this->name << " as been copied" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other) {

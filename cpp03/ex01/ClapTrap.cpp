@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:42:10 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 17:09:08 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/21 16:36:37 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ ClapTrap::ClapTrap(std::string name): energy_point(10), health_point(10), attack
 
 ClapTrap::ClapTrap(const ClapTrap &cpy) {
 	*this = cpy;
+	std::cout << "ClapTrap named: " << this->name << " as been copied" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
@@ -47,7 +48,7 @@ void ClapTrap::attack(const std::string& target) {
 	else {
 		std::cout << "ClapTrap" << this->name << " attack " << target  << "!!!" << std::endl;
 		if (this->attack_point < 1)
-			std::cout << "ClapTrap " << this->name << " this is not effective" << std::endl;
+			std::cout << "ClapTrap " << this->name << ": this is not effective" << std::endl;
 		else
 			std::cout << "ClapTrap" << this->name << " deal " << this->attack_point << " damage" << std::endl;
 		this->energy_point--;
