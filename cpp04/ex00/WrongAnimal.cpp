@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:50:34 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/21 15:29:31 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/21 15:27:46 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal() {
-	std::cout << "Animal created" << std::endl;
+WrongAnimal::WrongAnimal() {
+	std::cout << "WrongAnimal created" << std::endl;
 }
 
-Animal::Animal(const Animal &cpy) {
+WrongAnimal::WrongAnimal(const WrongAnimal &cpy) {
 	*this = cpy;
-	std::cout << "copy of Animal created" << std::endl;
+	std::cout << "copy of WrongAnimal created" << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &other) {
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other) {
 	this->type = other.type;
 	return (*this);
 }
 
-Animal::~Animal() {
-	std::cout << "Animal deleted" << std::endl;
+WrongAnimal::~WrongAnimal() {
+	std::cout << "WrongAnimmal created" << std::endl;
 }
 
-void Animal::makeSound(void) const {
+void WrongAnimal::makeSound(void) const {
+	std::cout << "sound of WrongAnimal" << std::endl;
 }
 
-std::string Animal::getType(void) const {
+std::string WrongAnimal::getType(void) const {
 	if (!this->type.empty())
 		return (this->type);
 	return (NULL);

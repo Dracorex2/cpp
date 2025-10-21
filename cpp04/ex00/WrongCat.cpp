@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:02:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/21 15:28:27 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/21 15:27:58 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog() {
-	this->type =  "Dog";
-	std::cout << "Dog created" << std::endl;
+WrongCat::WrongCat() {
+	this->type =  "WrongCat";
+	std::cout << "WrongCat created" << std::endl;
 }
 
-Dog::Dog(const Dog &cpy): Animal(cpy) {
+WrongCat::WrongCat(const WrongCat &cpy): WrongAnimal(cpy) {
 	*this = cpy;
-	std::cout << "copy of Dog created" << std::endl;
+	std::cout << "copy of WrongCat created" << std::endl;
 }
 
-Dog &Dog::operator=(const Dog &other) {
+WrongCat &WrongCat::operator=(const WrongCat &other) {
 	this->type = other.type;
 	return (*this);
 }
 
-Dog::~Dog() {
-	std::cout << "Dog deleted" << std::endl;
-}
-
-void Dog::makeSound(void) const {
-	std::cout << "ouaf, ouaf" << std::endl;
+WrongCat::~WrongCat() {
+	std::cout << "WrongCat deleted" << std::endl;
 }
