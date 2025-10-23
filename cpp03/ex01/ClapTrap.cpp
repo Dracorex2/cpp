@@ -54,8 +54,6 @@ void ClapTrap::attack(const std::string& target) {
 		this->energy_point--;
 	}
 }
-void ClapTrap::takeDamage(unsigned int amount) {
-	if (this->health_point < 1)
 		std::cout << "It is already dead, your attack is useless";
 	else {
 		std::cout << this->name << " take " << amount << " damages" << std::endl;
