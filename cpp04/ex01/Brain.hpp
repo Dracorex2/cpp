@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 15:06:01 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/23 17:12:37 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:14:23 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ class Brain
 		Brain copy(Brain cpy);
 		std::string ideas[100];
 };
-
 
 #endif

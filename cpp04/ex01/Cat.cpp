@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:02:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/23 17:09:45 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:31:24 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,18 @@ Cat::Cat(const Cat &cpy): Animal(cpy) {
 }
 
 Cat &Cat::operator=(const Cat &other) {
+	if (&other == this)
+		return (*this);
 	this->type = other.type;
 	delete this->brain;
 	this->brain = new Brain();
-	*this->brain = *other.brain;
+	for (int i = 0; i < 100; i++)
+		this->brain->ideas[i] = other.brain->ideas[i];
 	return (*this);
 }
 
 Cat::~Cat() {
+	std::cout << this->brain->ideas[0] << std::endl;
 	delete this->brain;
 	std::cout << "Cat deleted" << std::endl;
 }

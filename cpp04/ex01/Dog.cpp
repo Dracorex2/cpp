@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:02:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/23 16:14:28 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:22:22 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,13 @@ Dog::Dog(const Dog &cpy): Animal(cpy) {
 }
 
 Dog &Dog::operator=(const Dog &other) {
+	if (&other == this)
+		return (*this);
 	this->type = other.type;
+	delete this->brain;
 	this->brain = new Brain();
-	*this->brain = *other.brain;
+	for (int i = 0; i < 100; i++)
+		this->brain->ideas[i] = other.brain->ideas[i];
 	return (*this);
 }
 

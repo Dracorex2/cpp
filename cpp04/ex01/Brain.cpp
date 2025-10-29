@@ -6,13 +6,15 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 15:23:02 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/23 17:12:29 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:29:52 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
 
 Brain::Brain() {
+	this->ideas[0] = "eat";
+	this->ideas[1] = "eat2";
 	std::cout << "Brain created" << std::endl;
 }
 
@@ -28,8 +30,4 @@ Brain &Brain::operator=(const Brain &other) {;
 
 Brain::~Brain() {
 	std::cout << "Brain deleted" << std::endl;
-}
-
-Brain Brain::copy(Brain cpy) {
-	
 }
