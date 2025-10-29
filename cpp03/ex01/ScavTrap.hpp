@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:55:19 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 17:56:00 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:48:55 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,14 @@
 
 class ScavTrap : public ClapTrap
 {
-private:
-	std::string name;
-	int energy_point;
-	int health_point;
-	int attack_point;
-	
-public:
-	ScavTrap();
-	ScavTrap(std::string name);
-	ScavTrap(const ScavTrap &cpy);
-	ScavTrap &operator=(const ScavTrap &other);
-	~ScavTrap();
-	void attack(const std::string& target);
-	void guardGate();
+	public:
+		ScavTrap();
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap &cpy);
+		ScavTrap &operator=(const ScavTrap &other);
+		~ScavTrap();
+		void attack(const std::string& target);
+		void guardGate();
 };
 
 

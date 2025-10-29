@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:55:19 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/20 17:56:14 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:48:30 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,13 @@
 
 class FragTrap : public ClapTrap
 {
-private:
-	std::string name;
-	int energy_point;
-	int health_point;
-	int attack_point;
-	
-public:
-	FragTrap();
-	FragTrap(std::string name);
-	FragTrap(const FragTrap &cpy);
-	FragTrap &operator=(const FragTrap &other);
-	~FragTrap();
-	void attack(const std::string& target);
-	void highFivesGuys(void);
+	public:
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(const FragTrap &cpy);
+		FragTrap &operator=(const FragTrap &other);
+		~FragTrap();
+		void highFivesGuys(void);
 };
 
 

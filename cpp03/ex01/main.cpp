@@ -14,8 +14,8 @@
 #include "ScavTrap.hpp"
 
 int main(void) {
-	ClapTrap john("john");
-	ScavTrap jimy("jimy");
+	ScavTrap john("john");
+	ScavTrap jimy(john);
 	
 	std::cout << "ClapTrap class" << std::endl;
 	john.attack("bob");

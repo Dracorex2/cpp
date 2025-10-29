@@ -6,23 +6,32 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:54:12 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/21 16:39:58 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:09:18 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(): name("mike"), energy_point(100), health_point(100), attack_point(30) {
-	std::cout << "FragTrap named: mike as been created" << std::endl;
+FragTrap::FragTrap(): ClapTrap() {
+	this->energy_point = 100;
+	this->health_point = 100;
+	this->attack_point = 30;
+	std::cout << "Default constructor: ";
+	std::cout << "FragTrap named: mike has been created" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name): energy_point(100), health_point(100), attack_point(30) {
-	this->name = name;
-	std::cout << "FragTrap named: " << this->name << " as been created" << std::endl;
+FragTrap::FragTrap(std::string name): ClapTrap(name) {
+	this->energy_point = 100;
+	this->health_point = 100;
+	this->attack_point = 30;
+	std::cout << "Constructor by name: ";
+	std::cout << "FragTrap named: " << this->name << " has been created" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &cpy): ClapTrap(cpy) {
+	std::cout << "Copy constructor: ";
 	*this = cpy;
+	std::cout << "FragTrap named: " << this->name << " has been copied" << std::endl;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &other) {
@@ -36,20 +45,9 @@ FragTrap &FragTrap::operator=(const FragTrap &other) {
 }
 
 FragTrap::~FragTrap() {
-	std::cout << "FragTrap named: " << this->name << " as been deleted" << std::endl;
+	std::cout << "Destructor: ";
+	std::cout << "FragTrap named: " << this->name << " has been deleted" << std::endl;
 }
-
-void FragTrap::attack(const std::string& target) {
-	if (this->health_point < 1)
-		std::cout << "FragTrap " << this->name << " can't attack, is DEAD" << std::endl;
-	else if (this->energy_point < 1)
-		std::cout << "FragTrap " << this->name << " can't attack, is too tierd" << std::endl;
-	else {
-		std::cout << "FragTrap " << this->name << " attack " << target  << " and deal " << this->attack_point << std::endl;
-		this->energy_point--;
-	}
-}
-
 
 void FragTrap::highFivesGuys(void) {
 	std::cout << "FragTrap named " << this->name << "high-fives you!!" << std::endl;

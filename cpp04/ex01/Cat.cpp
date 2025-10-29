@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:02:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/23 16:14:39 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/23 17:09:45 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Cat::Cat(const Cat &cpy): Animal(cpy) {
 
 Cat &Cat::operator=(const Cat &other) {
 	this->type = other.type;
+	delete this->brain;
 	this->brain = new Brain();
 	*this->brain = *other.brain;
 	return (*this);
