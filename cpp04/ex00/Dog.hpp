@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:53:32 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/21 15:16:28 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:25:31 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,12 @@
 
 class Dog : public Animal
 {
-private:
-	/* data */
-public:
-	Dog();
-	Dog(const Dog &cpy);
-	Dog &operator=(const Dog &other);
-	~Dog();
-	void makeSound(void) const;
+	public:
+		Dog();
+		Dog(const Dog &cpy);
+		Dog &operator=(const Dog &other);
+		~Dog();
+		void makeSound(void) const;
 };
 
 #endif

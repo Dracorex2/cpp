@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:39:40 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/29 15:59:40 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:03:58 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,11 @@ int main(void) {
 	jimy.attack("kevin");
 	jimy.takeDamage(2);
 	jimy.beRepaired(1);
+	jimy.guardGate();
 	std::cout << "FragTrap class" << std::endl;
 	FragTrap kevin("kevin");
 	kevin.attack("kevin");
 	kevin.takeDamage(2);
 	kevin.beRepaired(1);
+	kevin.highFivesGuys();
 }

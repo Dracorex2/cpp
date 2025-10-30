@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 15:23:02 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/29 16:29:52 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:31:02 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ Brain::Brain(const Brain &cpy) {
 }
 
 Brain &Brain::operator=(const Brain &other) {;
+	if (&other == this)
+		return (*this);
 	*this->ideas = *other.ideas;
 	return (*this);
 }

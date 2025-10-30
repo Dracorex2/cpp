@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:54:12 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/29 16:09:18 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:01:05 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ FragTrap::~FragTrap() {
 }
 
 void FragTrap::highFivesGuys(void) {
-	std::cout << "FragTrap named " << this->name << "high-fives you!!" << std::endl;
+	std::cout << "FragTrap named " << this->name << " high-fives you!!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:02:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/21 15:27:58 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:32:07 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ WrongCat::WrongCat(const WrongCat &cpy): WrongAnimal(cpy) {
 }
 
 WrongCat &WrongCat::operator=(const WrongCat &other) {
+	if (&other == this)
+		return (*this);
 	this->type = other.type;
 	return (*this);
 }

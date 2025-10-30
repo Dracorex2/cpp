@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:50:34 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/21 15:27:46 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:31:28 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ WrongAnimal::WrongAnimal(const WrongAnimal &cpy) {
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other) {
+	if (&other == this)
+		return (*this);
 	this->type = other.type;
 	return (*this);
 }

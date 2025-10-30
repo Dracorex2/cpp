@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:55:19 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/29 15:48:41 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:03:08 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap
-{	
+{
 	public:
 		ScavTrap();
 		ScavTrap(std::string name);

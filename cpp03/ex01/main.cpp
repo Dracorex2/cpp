@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:39:40 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/17 17:13:05 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:04:15 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ int main(void) {
 	jimy.attack("kevin");
 	jimy.takeDamage(2);
 	jimy.beRepaired(1);
+	jimy.guardGate();
 }

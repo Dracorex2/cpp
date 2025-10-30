@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:42:10 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/29 16:08:24 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:00:48 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
 		std::cout << "ClapTrap " << this->name << " take " << amount << " damage" << std::endl;
 		this->health_point -= amount;
 		if (this->health_point < 1)
-			std::cout << "ClapTrap " << this->name << " died";
+			std::cout << "ClapTrap " << this->name << " died" << std::endl;
  	}
 }
 void ClapTrap::beRepaired(unsigned int amount) {

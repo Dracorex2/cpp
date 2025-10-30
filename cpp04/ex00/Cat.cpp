@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:02:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/21 15:28:53 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:30:07 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ Cat::Cat(const Cat &cpy): Animal(cpy) {
 }
 
 Cat &Cat::operator=(const Cat &other) {
+	if (&other == this)
+		return (*this);
 	this->type = other.type;
 	return (*this);
 }

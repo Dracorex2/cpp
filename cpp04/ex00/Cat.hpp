@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:53:32 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/21 15:16:23 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:25:09 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,12 @@
 
 class Cat : public Animal
 {
-private:
-	/* data */
-public:
-	Cat();
-	Cat(const Cat &cpy);
-	Cat &operator=(const Cat &other);
-	~Cat();
-	void makeSound(void) const;
+	public:
+		Cat();
+		Cat(const Cat &cpy);
+		Cat &operator=(const Cat &other);
+		~Cat();
+		void makeSound(void) const;
 };
 
 #endif
