@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:50:17 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/30 18:49:51 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:51:31 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,4 @@ int main()
 	i->makeSound();
 	delete j;
 	delete i;
-} 
+}
