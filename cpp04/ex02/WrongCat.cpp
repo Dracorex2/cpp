@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:02:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/30 18:30:34 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:53:49 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,8 @@ WrongCat &WrongCat::operator=(const WrongCat &other) {
 
 WrongCat::~WrongCat() {
 	std::cout << "WrongCat deleted" << std::endl;
+}
+
+void WrongCat::makeSound(void) const {
+	std::cout << "miaougrou, miaoumiagrou" << std::endl;
 }

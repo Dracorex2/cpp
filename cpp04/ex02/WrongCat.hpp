@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:53:32 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/21 15:05:26 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:53:51 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@
 
 class WrongCat : public WrongAnimal
 {
-private:
-	/* data */
-public:
-	WrongCat();
-	WrongCat(const WrongCat &cpy);
-	WrongCat &operator=(const WrongCat &other);
-	~WrongCat();
+	public:
+		WrongCat();
+		WrongCat(const WrongCat &cpy);
+		WrongCat &operator=(const WrongCat &other);
+		~WrongCat();
+		void makeSound(void) const;
 };
 
 #endif
