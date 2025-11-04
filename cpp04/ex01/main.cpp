@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:50:17 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/23 16:13:09 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:14:53 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,9 @@ int main()
 	{
 		delete meta[i];
 	}
+	Animal* gato = new Cat();
+	Animal* gato2 = new Cat();
+	*gato2 = *gato;
+	delete gato;
+	delete gato2;
 } 

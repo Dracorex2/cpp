@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:02:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/29 16:31:24 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:10:19 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Cat::Cat() {
 }
 
 Cat::Cat(const Cat &cpy): Animal(cpy) {
+	this->brain = NULL;
 	*this = cpy;
 	std::cout << "copy of Cat created" << std::endl;
 }

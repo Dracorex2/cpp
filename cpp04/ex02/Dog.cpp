@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:02:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/29 16:22:22 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:10:15 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Dog::Dog() {
 }
 
 Dog::Dog(const Dog &cpy): Animal(cpy) {
+	this->brain = NULL;
 	*this = cpy;
 	std::cout << "copy of Dog created" << std::endl;
 }
