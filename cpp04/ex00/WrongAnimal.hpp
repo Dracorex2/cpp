@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:50:41 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/30 18:25:50 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:57:07 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class WrongAnimal
 		WrongAnimal(const WrongAnimal &cpy);
 		WrongAnimal &operator=(const WrongAnimal &other);
 		virtual ~WrongAnimal();
-		virtual void makeSound(void) const;
+		void makeSound(void) const;
 		virtual std::string getType(void) const;
 };
 
