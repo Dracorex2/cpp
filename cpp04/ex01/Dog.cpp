@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:02:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/11/04 15:06:48 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:19:12 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ Dog &Dog::operator=(const Dog &other) {
 }
 
 Dog::~Dog() {
+	std::cout << "Adress of the brain " << this->brain << std::endl;
 	delete this->brain;
 	std::cout << "Dog deleted" << std::endl;
 }

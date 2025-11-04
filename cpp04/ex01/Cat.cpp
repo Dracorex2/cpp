@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:02:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/11/04 15:09:04 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:19:19 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Cat &Cat::operator=(const Cat &other) {
 }
 
 Cat::~Cat() {
-	std::cout << this->brain->ideas[0] << std::endl;
+	std::cout << "Adress of the brain " << this->brain << std::endl;
 	delete this->brain;
 	std::cout << "Cat deleted" << std::endl;
 }
