@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:50:41 by lucmansa          #+#    #+#             */
-/*   Updated: 2025/10/29 16:50:49 by lucmansa         ###   ########.fr       */
+/*   Updated: 2025/11/07 14:57:19 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ public:
 	Animal();
 	Animal(const Animal &cpy);
 	Animal &operator=(const Animal &other);
-	virtual ~Animal() = 0;
-	virtual void makeSound(void) const;
+	virtual ~Animal();
+	virtual void makeSound(void) const = 0;
 	virtual std::string getType(void) const;
 };
 
