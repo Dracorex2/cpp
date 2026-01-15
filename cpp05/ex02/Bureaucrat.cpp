@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:56:40 by lucmansa          #+#    #+#             */
-/*   Updated: 2026/01/14 15:49:02 by lucmansa         ###   ########.fr       */
+/*   Updated: 2026/01/15 17:51:33 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,19 @@ const std::string Bureaucrat::getName() const{
 
 int Bureaucrat::getGrade() const{
 	return this->grade;
+}
+
+void Bureaucrat::signForm(AForm &form) {
+	try {
+		form.beSigned(*this);
+		std::cout << this->getName() << " signed " << form.getName() << std::endl;
+	}
+	catch (const std::exception &e) {
+		std::cout << this->getName();
+		std::cout << " couldn't sign ";
+		std::cout << form.getName();
+		std::cout << " because ";
+		std::cout << e.what() << std::endl;
+
+	}	
 }

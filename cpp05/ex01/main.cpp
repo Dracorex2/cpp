@@ -6,42 +6,23 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:34:21 by lucmansa          #+#    #+#             */
-/*   Updated: 2026/01/14 15:54:02 by lucmansa         ###   ########.fr       */
+/*   Updated: 2026/01/15 16:48:18 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main(void) {
 	Bureaucrat john("john", 3);
-	std::cout << john << std::endl;
-	try {
+	Form bla("Important", 2, 2);
+	john.signForm(bla);
+	std::cout << "Incrementing john grade" << std::endl;
+	try	{
 		john.incrementGrade();
 	}
-	catch(const std::exception &e) {
+	catch(const std::exception& e) {
 		std::cerr << e.what() << '\n';
 	}
-	Bureaucrat john2(john);
-	std::cout << john << std::endl;
-		try {
-		john.incrementGrade();
-	}
-	catch(const std::exception &e) {
-		std::cerr << e.what() << '\n';
-	}
-	std::cout << john << std::endl;
-		try {
-		john.incrementGrade();
-	}
-	catch(const std::exception &e) {
-		std::cerr << e.what() << '\n';
-	}
-	std::cout << john << std::endl;
-	std::cout << john2 << std::endl;
-	try {
-		Bureaucrat mike("mike", 0);
-	}
-	catch (const std::exception &e){
-		std::cerr << e.what() << '\n';
-	}
+	john.signForm(bla);
 }
