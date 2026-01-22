@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                          :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/15 16:51:46 by lucmansa          #+#    #+#             */
-/*   Updated: 2026/01/21 15:37:34 by lucmansa         ###   ########.fr       */
+/*   Created: 2026/01/21 16:33:24 by lucmansa          #+#    #+#             */
+/*   Updated: 2026/01/21 16:44:38 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-#define ROBOTOMYREQUESTFORM_HPP
-
+#ifndef INTERN_HPP
+#define INTERN_HPP
 #include "AForm.hpp"
 
-class RobotomyRequestForm : public AForm
-{
-	private:
-		RobotomyRequestForm();
-	protected:
-		virtual void doThings(std::string target) const;
+
+class Intern {
 	public:
-		RobotomyRequestForm(std::string target);
-		RobotomyRequestForm(const RobotomyRequestForm &cpy);
-		~RobotomyRequestForm();
-		RobotomyRequestForm &operator=(const RobotomyRequestForm &other);
+		AForm *makeForm(std::string type, std::string name) const;
+		Intern();
+		Intern(const Intern &cpy);
+		Intern &operator=(const Intern &other);
+		~Intern();
 };
 
 #endif
