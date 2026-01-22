@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:36:27 by lucmansa          #+#    #+#             */
-/*   Updated: 2026/01/21 17:40:16 by lucmansa         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:35:43 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,32 @@ Intern::Intern(const Intern &cpy) {
 }
 
 Intern &Intern::operator=(const Intern &other) {
+	(void)other;
 	return (*this);
 }
 
 Intern::~Intern() {
 }
 
+static AForm *shrubbery(std::string name) {
+	return new ShrubberyCreationForm(name);
+}
+
+static AForm *robotomy(std::string name) {
+	return new RobotomyRequestForm(name);
+}
+
+static AForm *presidential(std::string name) {
+	return new PresidentialPardonForm(name);
+}
+
 AForm *Intern::makeForm(std::string type, std::string name) const {
-	std::string str[4] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm"};
-	void (Harl::*func[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string str[3] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm"};
+	AForm *(*func[3])(std::string) = {shrubbery, robotomy, presidential};
 	
-	if (type == "ShrubberyCreationForm")
-		AForm *form = new ShrubberyCreationForm(name);
-		if (type == "ShrubberyCreationForm")
-		AForm *form = new ShrubberyCreationForm(name);
-		if (type == "ShrubberyCreationForm")
-		AForm *form = new ShrubberyCreationForm(name);
-		if (type == "ShrubberyCreationForm")
-		AForm *form = new ShrubberyCreationForm(name);
+	for (int i = 0; i < 3; i++) {
+		if (str[i] == type)
+			return func[i](name);
+	}
+	return NULL;
 }
