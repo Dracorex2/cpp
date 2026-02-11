@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:34:21 by lucmansa          #+#    #+#             */
-/*   Updated: 2026/01/15 16:48:18 by lucmansa         ###   ########.fr       */
+/*   Updated: 2026/02/03 15:05:02 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main(void) {
 		john.incrementGrade();
 	}
 	catch(const std::exception& e) {
-		std::cerr << e.what() << '\n';
+		std::cout << e.what() << '\n';
 	}
 	john.signForm(bla);
 }

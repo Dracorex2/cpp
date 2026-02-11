@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 14:52:06 by lucmansa          #+#    #+#             */
-/*   Updated: 2026/01/15 16:37:23 by lucmansa         ###   ########.fr       */
+/*   Updated: 2026/02/03 15:18:43 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Form
 		const std::string getName() const;
 		int getGradeToSign() const;
 		int getGradeToExecute() const;
-		bool isSign() const;
+		bool getIfSign() const;
 		void beSigned(const Bureaucrat &br);
 		class GradeTooHighException : public std::exception
 		{

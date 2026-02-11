@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:56:40 by lucmansa          #+#    #+#             */
-/*   Updated: 2026/01/15 16:42:56 by lucmansa         ###   ########.fr       */
+/*   Updated: 2026/02/03 15:18:47 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ const std::string Form::getName() const{
 	return this->name;
 }
  
-bool Form::isSign() const{
+bool Form::getIfSign() const{
 	return this->is_sign;
 }
 
@@ -66,7 +66,7 @@ int Form::getGradeToExecute() const{
 
 std::ostream& operator<<(std::ostream &out, const Form &c) {
 	std::string sign;
-	if (c.isSign())
+	if (c.getIfSign())
 		sign = "This form is sign";
 	else
 		sign = "This form is not sign";

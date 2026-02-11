@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:34:21 by lucmansa          #+#    #+#             */
-/*   Updated: 2026/01/14 15:54:02 by lucmansa         ###   ########.fr       */
+/*   Updated: 2026/02/03 15:05:15 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(void) {
 		john.incrementGrade();
 	}
 	catch(const std::exception &e) {
-		std::cerr << e.what() << '\n';
+		std::cout << e.what() << '\n';
 	}
 	Bureaucrat john2(john);
 	std::cout << john << std::endl;
@@ -27,14 +27,14 @@ int main(void) {
 		john.incrementGrade();
 	}
 	catch(const std::exception &e) {
-		std::cerr << e.what() << '\n';
+		std::cout << e.what() << '\n';
 	}
 	std::cout << john << std::endl;
 		try {
 		john.incrementGrade();
 	}
 	catch(const std::exception &e) {
-		std::cerr << e.what() << '\n';
+		std::cout << e.what() << '\n';
 	}
 	std::cout << john << std::endl;
 	std::cout << john2 << std::endl;
@@ -42,6 +42,6 @@ int main(void) {
 		Bureaucrat mike("mike", 0);
 	}
 	catch (const std::exception &e){
-		std::cerr << e.what() << '\n';
+		std::cout << e.what() << '\n';
 	}
 }

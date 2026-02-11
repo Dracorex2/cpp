@@ -6,7 +6,7 @@
 /*   By: lucmansa <lucmansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:56:40 by lucmansa          #+#    #+#             */
-/*   Updated: 2026/01/14 15:49:02 by lucmansa         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:25:42 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void Bureaucrat::incrementGrade() {
 
 void Bureaucrat::decrementGrade() {
 	if (this->grade == 150)
-		throw to_hight;
+		throw to_low;
 	this->grade++;
 }
 
