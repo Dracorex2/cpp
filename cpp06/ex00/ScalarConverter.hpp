@@ -10,8 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCALARCONVERTER_HPP
+#define SCALARCONVERTER_HPP
+
 #include <iostream>
-#include <cstdlib>
+#include <string>
 
 #define TYPE_CHAR 1
 #define TYPE_INT 2
@@ -36,3 +39,5 @@ public:
 
 int getType(std::string str);
 void convertType(std::string str, int type);
+
+#endif
