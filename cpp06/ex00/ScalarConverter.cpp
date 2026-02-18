@@ -31,4 +31,6 @@ void ScalarConverter::convert(std::string str) {
 	int type = getType(str);
 	if (type != 0)
 		convertType(str, type);
+	else
+		std::cout << "Error, unknow type" << std::endl;
 }
