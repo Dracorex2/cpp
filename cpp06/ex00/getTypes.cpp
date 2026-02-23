@@ -55,7 +55,7 @@ static int isDouble(std::string str) {
 	}
 	if (dots > 1)
 		return 0;
-	return 0;
+	return 1;
 }
 
 int isPInf(std::string str) {
