@@ -10,12 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
+
 #include <iostream>
 #include <iomanip>
 #include <ratio>
 #include "Serializer.hpp"
-
-
 int main(void) {
 	Data test;
 	test.i = 1;
