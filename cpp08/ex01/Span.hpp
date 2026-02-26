@@ -8,9 +8,9 @@ class Span {
 		unsigned int max;
 	public:
 		Span();
-		Span(int i);
-		Span(Span &cpy);
-		Span operator=(Span &oter);
+		Span(unsigned int i);
+		Span(const Span &cpy);
+		Span operator=(const Span &oter);
 		~Span();
 		void addNumber(int nb);
 		void addRange(std::vector<int>::iterator beg, std::vector<int>::iterator end);

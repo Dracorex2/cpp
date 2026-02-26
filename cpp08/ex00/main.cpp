@@ -7,6 +7,16 @@ int main(void) {
 	std::vector<int> vec;
 	vec.push_back(2);
 	std::list<int> lst;
-	std::cout << easyfind(vec, 2) << std::endl;
-	std::cout << easyfind(lst, 2) << std::endl;
+	try {
+		std::cout << easyfind(vec, 2) << std::endl;
+	}
+	catch (const std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	try {
+		std::cout << easyfind(lst, 2) << std::endl;
+	}
+	catch (const std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
 }

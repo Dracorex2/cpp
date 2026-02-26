@@ -5,13 +5,13 @@
 Span::Span() {
 	this->max = 0;
 }
-Span::Span(int i) {
+Span::Span(unsigned int i) {
 	this->max = i;
 }
-Span::Span(Span &cpy) {
+Span::Span(const Span &cpy) {
 	*this = cpy;
 }
-Span Span::operator=(Span &other) {
+Span Span::operator=(const Span &other) {
 	this->max = other.max;
 	this->vals = other.vals;
 	return *this;
