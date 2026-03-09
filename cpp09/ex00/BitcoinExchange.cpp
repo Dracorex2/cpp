@@ -16,7 +16,7 @@ BitcoinExchange::BitcoinExchange(std::string path) {
 	while (std::getline(fd, line)) {
 		size_t sep = line.find(',');
 		if (!sep)
-			throw std::runtime_error("file" + path + "mal formated");
+			throw std::runtime_error("line " + line + " mal formated in file :" + path);
 		this->data[line.substr(0, sep)] = std::atof(line.substr(sep + 1).c_str());
 	}
 }
@@ -64,7 +64,11 @@ static int checkDate(std::string date) {
 	if (month > 12 || month == 0 || day == 0)
 		return 0;
 	uint64_t lst = 0xffbfefffdff7f9f;
+	//       11111 11110 11111 11110 11111 11111 11110 11111 11110 11111 11100 11111
+	//         31   30     31    30   31    31    30     31    30   31     28    31
 	uint64_t lst_leap = 0xffbfefffdff7fbf;
+	//       11111 11110 11111 11110 11111 11111 11110 11111 11110 11111 11101 11111
+	//         31   30     31    30   31    31    30     31    30   31     29    31
 	uint64_t month_end = lst;
 	if (year % 4)
 		month_end = lst;
@@ -72,7 +76,7 @@ static int checkDate(std::string date) {
 		month_end = lst_leap;
 	else if (year % 400 == 0)
 		month_end = lst_leap;
-	return (month_end >> ((day - 1) * 5)) & 0b11111;
+	return day <= (int)((month_end >> ((day - 1) * 5)) & 0b11111);
 }
 
 static int checkVal(std::string val) {
